@@ -1,6 +1,6 @@
 <?php if ( !defined('BASEPATH')) exit('No direct script access allowed');
 
-class Dokumen_Masuk extends CI_Model {
+class Dokumen_Masuk_Model extends CI_Model {
 
 	public function GetDokumenMasuk(){
 		$data = $this->db->query('select * from dokumen_masuk');
