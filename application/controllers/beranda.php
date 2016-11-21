@@ -20,7 +20,7 @@ class Beranda extends CI_Controller {
 	 */
 	function __construct(){
 		parent::__construct();
-			$this->load->model('dokumen_masuk');
+			$this->load->model('dokumen_masuk_model');
 	}
 
 	public function index()
@@ -28,7 +28,7 @@ class Beranda extends CI_Controller {
 		$this->load->view('header');
 		$this->load->view('header_content');
 		$this->load->view('aside');
-		$dokumen_masuk = $this->dokumen_masuk->GetDokumenMasuk();
+		$dokumen_masuk = $this->dokumen_masuk_model->GetDokumenMasuk();
 		$this->load->view('dokumen_masuk', array('data' => $dokumen_masuk));
 		$this->load->view('footer');		
 	}
