@@ -7,28 +7,53 @@
       <ul class="sidebar-menu">        
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-file-text-o"></i> <span>Lihat Data</span>
+            <i class="fa fa-file-text-o"></i> <span>Ekspedisi</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="index.html"><i class="fa fa-circle-o"></i> Dokumen Masuk</a></li>
-            <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i> Dokumen Keluar</a></li>
+            <li><a href="<?php echo base_url();?>beranda"><i class="fa fa-circle-o"></i> Lihat Dokumen</a></li>
+            <li class="active"><a href="<?php echo base_url();?>dokumen_masuk/ekspedisi"><i class="fa fa-circle-o"></i> Form Dokumen</a></li>
+            <li class="active"><a href="<?php echo base_url();?>dokumen_masuk/edit_ekspedisi"><i class="fa fa-circle-o"></i> Edit Dokumen</a></li>
           </ul>          
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-pencil-square-o"></i> <span>Tambah Data</span>
+            <i class="fa fa-file-text-o"></i> <span>Sekertaris Kep. Perwakilan</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="index.html"><i class="fa fa-circle-o"></i> Dokumen Masuk</a></li>
-            <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i> Dokumen Keluar</a></li>
-          </ul>
-        </li>
+            <li><a href="<?php echo base_url();?>beranda"><i class="fa fa-circle-o"></i> Lihat Dokumen</a></li>
+            <li class="active"><a href="<?php echo base_url();?>dokumen_masuk/skperwakilan"><i class="fa fa-circle-o"></i> Form Dokumen</a></li>
+          </ul>                  
+        </li>  
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-file-text-o"></i> <span>Sekertaris Kep. Grup</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo base_url();?>beranda"><i class="fa fa-circle-o"></i> Lihat Dokumen</a></li>
+            <li class="active"><a href="<?php echo base_url();?>dokumen_masuk/skgrup"><i class="fa fa-circle-o"></i> Form Dokumen</a></li>
+          </ul>                  
+        </li>        
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-file-text-o"></i> <span>Sekertaris Kep. Divisi</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo base_url();?>beranda"><i class="fa fa-circle-o"></i> Lihat Dokumen</a></li>
+            <li class="active"><a href="<?php echo base_url();?>dokumen_masuk/skdivisi"><i class="fa fa-circle-o"></i> Form Dokumen</a></li>
+          </ul>                  
+        </li>                      
         <li class="treeview">
           <a href="#">
             <i class="fa fa-eye"></i> <span>Panduan</span>
@@ -78,9 +103,13 @@
                   </ul>
                 </li>
               </ul>
-            </li>            
+            </li>                      
           </ul>
-
+          <li class="treeview">
+            <a href="<?php echo base_url();?>akun">
+              <i class="fa fa-user"></i> <span>Kelola Akun</span>
+            </a>          
+          </li>  
         </li>                
       </ul>
     </section>
