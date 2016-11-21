@@ -11,7 +11,7 @@
         <ul class="nav navbar-nav">
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">              
-              <span class="hidden-xs">Sekertaris Kepala Perwakilan</span>
+              <span class="hidden-xs">Seseorang yang sedang login</span>
             </a>
             <ul class="dropdown-menu">
               <li>
