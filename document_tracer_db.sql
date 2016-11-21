@@ -106,3 +106,7 @@ ALTER TABLE `dokumen_masuk`
 
 /*21/11/2016*/
 ALTER TABLE `akun` ADD `role` VARCHAR(100) NOT NULL AFTER `password`;
+
+ALTER TABLE `dokumen_masuk` ADD `flag` BOOLEAN NOT NULL AFTER `hyperlink`;
+
+ALTER TABLE `akun` ADD `flag` BOOLEAN NOT NULL AFTER `role`;
