@@ -34,20 +34,20 @@
                     <option>Data A kolom dari</option>
                     <option>Data B kolom dari</option>
                   </select>
-                </div>                            
+                </div>
+                <div class="form-group">
+                  <label>Tanggal Surat</label>
+                  <input type="date" class="form-control">
+                </div>                                            
+              </div>
+              <div class="col-xs-6">    
                 <div class="form-group">
                   <label>Nomor Surat</label>
                   <select class="form-control">
                     <option>Data A kolom nomor_surat</option>
                     <option>Data B kolom nomor_surat</option>
                   </select>
-                </div>
-              </div>
-              <div class="col-xs-6">        
-                <div class="form-group">
-                  <label>Tanggal Surat</label>
-                  <input type="date" class="form-control">
-                </div>
+                </div>                  
                 <div class="form-group">
                   <label>Perihal</label>
                   <input type="text" class="form-control">
@@ -58,19 +58,16 @@
                 <div class="form-group">
                   <label>Tanggal Terima Surat dan Keluar Ekspedisi</label>
                   <input type="date" class="form-control">
-                </div>  
+                </div> 
+                <div class="form-group">
+                  <button type="submit" class="btn btn-primary">Kirim</button>
+                </div>                 
               </div>
 
               <div class="col-xs-6">                                                    
                 <div class="form-group">
                   <label for="exampleInputFile">File Surat</label>
                   <input type="file" id="exampleInputFile">                  
-                </div>
-              </div>              
-
-              <div class="col-xs-6">                                                    
-                <div class="box-footer">
-                  <button type="submit" class="btn btn-primary">Kirim</button>
                 </div>
               </div>              
 

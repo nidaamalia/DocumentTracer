@@ -31,17 +31,17 @@
                 <div class="form-group">
                   <label>Dari</label>
                   <input type="text" class="form-control">
-                </div>                            
-                <div class="form-group">
-                  <label>Nomor Surat</label>
-                  <input type="text" class="form-control">
-                </div>
-              </div>
-              <div class="col-xs-6">        
+                </div>              
                 <div class="form-group">
                   <label>Tanggal Surat</label>
                   <input type="date" class="form-control">
-                </div>
+                </div>                              
+              </div>
+              <div class="col-xs-6">        
+                <div class="form-group">
+                  <label>Nomor Surat</label>
+                  <input type="text" class="form-control">
+                </div>              
                 <div class="form-group">
                   <label>Perihal</label>
                   <input type="text" class="form-control">
@@ -53,6 +53,9 @@
                   <label>Tanggal Terima Surat dan Keluar Ekspedisi</label>
                   <input type="date" class="form-control">
                 </div>  
+                <div class="form-group">
+                  <button type="submit" class="btn btn-primary">Kirim</button>
+                </div>                
               </div>
 
               <div class="col-xs-6">                                                    
@@ -61,12 +64,6 @@
                   <input type="file" id="exampleInputFile">                  
                 </div>
               </div>
-
-              <div class="col-xs-6">                                                    
-                <div class="box-footer">
-                  <button type="submit" class="btn btn-primary">Kirim</button>
-                </div>
-              </div>              
 
               </div>
               <!-- /.box-body -->
