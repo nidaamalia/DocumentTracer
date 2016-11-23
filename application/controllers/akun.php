@@ -28,8 +28,62 @@ class Akun extends CI_Controller {
 		$this->load->view('header');
 		$this->load->view('header_content');
 		$this->load->view('aside');
-		$dokumen_masuk = $this->dokumen_masuk->GetDokumenMasuk();
+		$dokumen_masuk = $this->dokumen_masuk->GetAkun();
 		$this->load->view('akun', array('data' => $dokumen_masuk));
 		$this->load->view('footer');		
+	}
+
+	public function createAkun(){
+
+		$nama = $this->input->post('nama');
+		$username = $this->input->post('username');
+		$password = $this->input->post('password');
+		$passworden = md5($password);
+		$role = $this->input->post('role');
+
+		$data = array(
+			'nama' => $nama, 
+			'username' => $username,
+			'password' => $passworden,
+			'role' => $role
+			);
+		$this->dokumen_masuk->createAkun($data,'akun');
+		redirect('akun');
+	}
+
+	public function editAkun($id){
+
+		$where = array('id' => $id);
+		$data['akun'] = $this->dokumen_masuk->editAkun($where,'akun')->result();
+	}
+
+	public function updateAkun(){
+
+		$id = $this->input->post('id');
+		$nama = $this->input->post('nama');
+		$username = $this->input->post('username');
+		$password = $this->input->post('password');
+		$role = $this->input->post('role');
+
+		$data = array(
+			'nama' => $nama, 
+			'username' => $username,
+			'password' => $password,
+			'role' => $role
+			);
+
+		$where = array(
+			'id' => $id
+			);
+
+		$this->dokumen_masuk->updateAkun($where,$data,'akun');
+		redirect('akun');			
+	}
+
+	public function hapusAkun($id){
+
+		$where = array('id' => $id);
+		$this->dokumen_masuk->hapusAkun($where,'akun');
+		redirect('akun');
 	}
 }

@@ -38,8 +38,8 @@
                 <tbody>
                 <?php foreach($data as $dm){?>
                 <tr>
-                  <td><?php echo $dm['masuk_dari']?></td>
-                  <td><?php echo $dm['no_surat']?></td>
+                  <td><?php echo $dm['nama']?></td>
+                  <td><?php echo $dm['role']?></td>
                   <td>
                     <button type="button" class="btn btn-success" data-toggle="modal" data-target="#editAkun">Edit</button>
                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#hapusAkun">Hapus</button>
@@ -72,34 +72,34 @@
             <h4 class="modal-title">Tambah Akun</h4>
           </div>
           <div class="modal-body">
-            <form role="form">
+            <form role="form" action="<?php echo base_url(). 'akun/createAkun';?>" method="post">
               <div class="box-body">
                 <div class="form-group">
                   <label>Nama</label>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" name="nama">
                 </div>           
                 <div class="form-group">
                   <label>Username</label>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" name="username">
                 </div>   
                 <div class="form-group">
                   <label>Password</label>
-                  <input type="password" class="form-control">
+                  <input type="password" class="form-control" name="password">
                 </div>                                                                   
                 <div class="form-group">
                   <label>Jabatan</label>
-                  <select class="form-control">
+                  <select class="form-control" name="role">
                     <option>Sekertaris Kepala Perwakilan</option>
                     <option>Sekertaris Kepala Divisi</option>
                     <option>Sekertaris Kepala Grup</option>
                   </select>
                 </div>
               </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+                <button type="submit" class="btn btn-primary" value="Tambah">Tambah</button>
+              </div>
             </form>                
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-            <button type="button" class="btn btn-primary">Tambah</button>
           </div>
         </div>
       </div>
@@ -119,34 +119,36 @@
             <h4 class="modal-title">Edit Akun</h4>
           </div>
           <div class="modal-body">
-            <form role="form">
+            <form role="form" action="<?php echo base_url(). 'akun/updateAkun';?>" method="post">
               <div class="box-body">
                 <div class="form-group">
                   <label>Nama</label>
-                  <input type="text" class="form-control">
+                  <input type="hidden" class="form-control" name="id" value="<?php echo $dm['id']?>">
+                  <input type="text" class="form-control" name="nama" value="<?php echo $dm['nama']?>">
                 </div>           
                 <div class="form-group">
                   <label>Username</label>
-                  <input type="text" class="form-control">
+                  <input type="text" class="form-control" name="username" value="<?php echo $dm['username']?>">
                 </div>   
                 <div class="form-group">
                   <label>Password</label>
-                  <input type="password" class="form-control">
+                  <input type="password" class="form-control" name="password" value="<?php echo $dm['password']?>">
                 </div>                                                                   
                 <div class="form-group">
                   <label>Jabatan</label>
-                  <select class="form-control">
+                  <select class="form-control" name="role">
+                    <?php echo "<option value='".$dm['role']."'>".$dm['role']."</option>"?>
                     <option>Sekertaris Kepala Perwakilan</option>
                     <option>Sekertaris Kepala Divisi</option>
                     <option>Sekertaris Kepala Grup</option>
                   </select>
                 </div>
               </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+                <button type="submit" class="btn btn-success" value="Update">Edit</button>
+              </div>
             </form>                
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-            <button type="button" class="btn btn-success">Edit</button>
           </div>
         </div>
       </div>
@@ -169,7 +171,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-            <button type="button" class="btn btn-danger">Hapus</button>
+            <button type="submit" class="btn btn-danger" value="Hapus">Hapus</button>
           </div>
         </div>
       </div>
