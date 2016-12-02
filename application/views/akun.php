@@ -41,8 +41,8 @@
                   <td><?php echo $dm['nama']?></td>
                   <td><?php echo $dm['role']?></td>
                   <td>
-                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#editAkun">Edit</button>
-                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#hapusAkun">Hapus</button>
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#editAkun<?php echo $dm['id']?>">Edit</button>
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#hapusAkun<?php echo $dm['id']?>">Hapus</button>
                   </td>                
                 </tr>
                 <?php }?>
@@ -111,7 +111,8 @@
   <!-- MODAL EDIT -->
   <div class="container">
     <!-- Modal -->
-    <div class="modal fade" id="editAkun" role="dialog">
+    <?php foreach($data as $dm){?>
+    <div class="modal fade" id="editAkun<?php echo $dm['id']?>" role="dialog">
       <div class="modal-dialog modal-sm">
         <div class="modal-content">
           <div class="modal-header">
@@ -148,35 +149,41 @@
                 <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
                 <button type="submit" class="btn btn-success" value="Update">Edit</button>
               </div>
-            </form>                
+            </form>            
           </div>
         </div>
       </div>
     </div>
   </div>
+  <?php }?>
   <!-- /.MODAL TAMBAH -->
 
   <!-- MODAL HAPUS -->
   <div class="container">
     <!-- Modal -->
-    <div class="modal fade" id="hapusAkun" role="dialog">
+    <?php foreach($data as $dm){?>
+    <div class="modal fade" id="hapusAkun<?php echo $dm['id']?>" role="dialog">
       <div class="modal-dialog modal-sm">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
             <h4 class="modal-title">Hapus Akun</h4>
           </div>
-          <div class="modal-body">
-          <p>Apakah Anda yakin akan menghapus akun ini?</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-            <button type="submit" class="btn btn-danger" value="Hapus">Hapus</button>
-          </div>
+          <form role="form" action="<?php echo base_url(). 'akun/hapusAkun/' .$dm['id'];?>" method="post">
+          <input type="hidden" class="form-control" name="id" value="<?php echo $dm['id']?>">
+            <div class="modal-body">
+            <p>Apakah Anda yakin akan menghapus akun ini?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+              <button type="submit" class="btn btn-danger" value="Hapus">Hapus</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
   </div>
+  <?php }?>
   <!-- /.MODAL TAMBAH -->
 
 </div>

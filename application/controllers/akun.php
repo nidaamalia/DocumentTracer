@@ -53,7 +53,9 @@ class Akun extends CI_Controller {
 
 	public function editAkun($id){
 
-		$where = array('id' => $id);
+		$where = array(
+			'id' => $id
+			);
 		$data['akun'] = $this->dokumen_masuk->editAkun($where,'akun')->result();
 	}
 
@@ -82,7 +84,10 @@ class Akun extends CI_Controller {
 
 	public function hapusAkun($id){
 
-		$where = array('id' => $id);
+		$where = array(
+			'id' => $id
+			);
+
 		$this->dokumen_masuk->hapusAkun($where,'akun');
 		redirect('akun');
 	}

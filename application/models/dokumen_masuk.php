@@ -23,9 +23,9 @@ class Dokumen_Masuk extends CI_Model {
 		$this->db->update($table, $data);
 	}
 
-	public function hapusAkun($where, $table){
+	public function hapusAkun($id, $table){
 
-		$this->db->where($where);
+		$this->db->where($id);
 		$this->db->delete($table);
 	}
 
