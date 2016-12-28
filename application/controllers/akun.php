@@ -47,6 +47,7 @@ class Akun extends CI_Controller {
 			'password' => $passworden,
 			'role' => $role
 			);
+
 		$this->dokumen_masuk->createAkun($data,'akun');
 		redirect('akun');
 	}

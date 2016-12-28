@@ -11,11 +11,11 @@
         <ul class="nav navbar-nav">
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">              
-              <span class="hidden-xs">Seseorang yang sedang login</span>
+              <span class="hidden-xs"><?php echo $this->session->userdata('username_login'); ?></span>
             </a>
             <ul class="dropdown-menu">
               <li>
-                  <a href="#">
+                  <a href="<?php echo base_url('login/logoutAkun'); ?>">
                     <i class="fa fa-sign-out"></i> Keluar
                   </a>
               </li>              

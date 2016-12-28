@@ -29,4 +29,9 @@ class Dokumen_Masuk extends CI_Model {
 		$this->db->delete($table);
 	}
 
+	public function loginAkun($table, $where){
+
+		return $this->db->get_where($table, $where);
+	}
+
 }

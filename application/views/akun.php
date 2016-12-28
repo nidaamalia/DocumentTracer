@@ -3,6 +3,7 @@
 <head>
   <!-- DataTables -->
   <link rel="stylesheet" href="<?php echo base_url();?>assets/plugins/datatables/dataTables.bootstrap.css">
+  <script type="text/javascript"></script>
 
 </head>
 <body class="hold-transition skin-blue">
@@ -156,7 +157,7 @@
     </div>
   </div>
   <?php }?>
-  <!-- /.MODAL TAMBAH -->
+  <!-- /.MODAL EDIT -->
 
   <!-- MODAL HAPUS -->
   <div class="container">
@@ -184,7 +185,7 @@
     </div>
   </div>
   <?php }?>
-  <!-- /.MODAL TAMBAH -->
+  <!-- /.MODAL HAPUS -->
 
 </div>
 <!-- ./wrapper -->

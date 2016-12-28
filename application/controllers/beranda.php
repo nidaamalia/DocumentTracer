@@ -21,6 +21,11 @@ class Beranda extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 			$this->load->model('dokumen_masuk_model');
+
+			// if($this->session->userdata('status') != "login"){
+
+			// redirect(base_url('login'));
+			// }
 	}
 
 	public function index()
